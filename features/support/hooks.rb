@@ -4,5 +4,5 @@ Before do
   Appium.promote_appium_methods Object
 
   @driver.start_driver
-  @driver.set_wait(20)
+  @driver.set_wait(DEFAULT_HOLD)
 end 
