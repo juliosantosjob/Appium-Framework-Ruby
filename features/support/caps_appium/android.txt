@@ -1,0 +1,4 @@
+[caps]
+platformName = 'Android'
+deviceName = 'emulator'
+app = '~/app/nuclone.apk"'
