@@ -1,4 +1,4 @@
 [caps]
 platformName = 'Android'
 deviceName = 'emulator'
-app = '~/app/nuclone.apk"'
+app = './app/nuclone.apk"'
