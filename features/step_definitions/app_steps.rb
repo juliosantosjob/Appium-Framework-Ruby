@@ -13,14 +13,9 @@ Then('displays its value: {string}') do |value|
 end
 
 And('the value is displayed') do
-  
-end
-    
-When('he selects an option show value') do
-
+  @app_screens.balance_displayed
 end
 
 Then('hide the value: {string}') do |string|
 
 end
-
