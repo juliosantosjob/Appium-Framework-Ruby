@@ -1,0 +1,10 @@
+caps
+    platformName: Android
+    deviceName: emulator
+    app: ./app/nuclone.apk
+
+appium_lib
+    server_url: http//localhost:4723/wd/hub
+    port: 4723
+    wait_timeout: 30
+    wait_interval: 1
