@@ -1,6 +1,8 @@
-server: 'hub-cloud.browserstack.com'
+caps_bs:
 
-common_caps:
+   server: 'hub-cloud.browserstack.com'
+
+  common_caps:
   browserstack.user: 'myUser'
   browserstack.key: 'myKey'
   project: 'First Cucumber Android Project'
