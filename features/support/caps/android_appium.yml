@@ -1,3 +1,5 @@
+caps_ap:
+
   caps:
     platformName: 'Android'
     deviceName: 'emulator'
