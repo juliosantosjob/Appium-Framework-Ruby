@@ -12,6 +12,8 @@ class App_Screens
   end
 
  def balance_displayed
-   rescue 'Balance not visible!' if (value_user_balance.displayed?)
+    element = find_element(:accessibility_id, 'user-balance')
+   rescue 'Balance not visible!' if (element == true)
+     return element
  end
 end
