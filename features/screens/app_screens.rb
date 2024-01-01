@@ -1,4 +1,5 @@
 class App_Screens
+  
   def open_app
     find_element(:xpath, '//*[contains(@text=, "NuConta")]').displayed?
   end
@@ -11,9 +12,7 @@ class App_Screens
     return find_element(:accessibility_id, 'user-balance').text
   end
 
- def balance_displayed
-    element = find_element(:accessibility_id, 'user-balance')
-   rescue 'Balance not visible!' if (element == true)
-     return element
- end
+  def balance_displayed
+    return find_element(:accessibility_id, 'user-balance')
+  end
 end
