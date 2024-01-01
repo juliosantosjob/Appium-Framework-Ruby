@@ -17,6 +17,6 @@ And('the value is displayed') do
 end
 
 Then('hide the value: {string}') do |string|
- get_hide_balance = @app_screens.balance_displayed
+  get_hide_balance = @app_screens.balance_displayed
   expect(get_hide_balance).to_be_nil
 end
