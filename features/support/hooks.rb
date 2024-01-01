@@ -6,7 +6,7 @@ Before do
       filePath = File.join(__dir__,'caps', 'android_browserstack.yml')
       caps_data = YAML.load_file(filePath)
 
-      CAPS_BS = caps_data[]
+      CAPS_BS = caps_data['caps_bs']
       Appium::Driver.new(caps, true)
       Appium.promote_appium_methods Object
     else
