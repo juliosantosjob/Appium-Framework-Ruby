@@ -1,1 +1,3 @@
- StyleGuideCopsOnly: false
+# Common configuration.
+
+StyleGuideCopsOnly: false
