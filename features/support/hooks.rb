@@ -3,7 +3,10 @@ Before do
 
   begin
     if (cloud == 'true') 
-      caps = Appium.load_appium_txt file: File.expand_path('caps_appium/android.txt', __dir__), verbose: true
+      filePath = File.join(__dir__,'caps', 'android_browserstack.yml')
+      caps_data = YAML.load_file(filePath)
+
+      CAPS_BS = caps_data[]
       Appium::Driver.new(caps, true)
       Appium.promote_appium_methods Object
     else
