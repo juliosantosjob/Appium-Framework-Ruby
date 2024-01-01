@@ -1,10 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    allure-cucumber (2.14.5)
-      allure-ruby-commons (= 2.14.5)
       cucumber (>= 4.0.0, < 8)
-    allure-ruby-commons (2.14.5)
       mime-types (>= 3.3, < 4)
       oj (>= 3.10, < 4)
       require_all (>= 2, < 4)
