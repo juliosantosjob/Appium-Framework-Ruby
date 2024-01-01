@@ -7,13 +7,16 @@ Before do
       caps_data = YAML.load_file(filePath)
 
       CAPS_BS = caps_data['caps_bs']
-      Appium::Driver.new(caps, true)
+      Appium::Driver.new(CAPS_BS, true)
       Appium.promote_appium_methods Object
     else
-      caps = Appium.load_appium_txt file: File.expand_path('caps_appium/android.txt', __dir__), verbose: true
-      Appium::Driver.new(caps, true)
+      filePath = File.join(__dir__,'caps', 'android_appium.yml')
+      caps_data = YAML.load_file(filePath)
+      
+      CAPS_AP = caps_data['caps_ap']
+      Appium::Driver.new(CAPS_AP, true)
       Appium.promote_appium_methods Object
-   rescue Exception => e
+  rescue Exception => e
       puts e.message
       Process.exit(0)
 end
