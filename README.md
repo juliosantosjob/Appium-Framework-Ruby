@@ -22,3 +22,18 @@ Certifique-se de ter as seguintes ferramentas instaladas em seu ambiente de dese
 Execute os testes usando o comando:
 ```bash
 bundle exec cucumber
+```
+
+## Estrutura do Projeto
+- `features/`: Contém os arquivos Gherkin com os cenários de teste.
+- `lib/`: Armazena classes e módulos reutilizáveis para a automação.
+- `config/`: Mantém arquivos de configuração, como `appium.yml`.
+
+## Contribuição
+Sinta-se à vontade para contribuir ou relatar problemas abrindo uma issue.
+
+## Licença
+Este projeto é distribuído sob a licença MIT. Consulte o arquivo `LICENSE` para obter mais detalhes.
+```
+
+Lembre-se de personalizar as seções conforme necessário para refletir as especificidades do seu projeto.
