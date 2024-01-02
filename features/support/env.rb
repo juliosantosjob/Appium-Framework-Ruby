@@ -4,13 +4,12 @@ require 'rubocop'
 require 'appium_lib'
 require 'yaml'
 require 'allure-cucumber'
+require 'ruby-lsp'
 
 DEFAULT_HOLD = 20
 
-FileUtils.rm_f(Dir.glob('output/*.json'))
-FileUtils.rm_f(Dir.glob('output/*.png'))
+caps = Appium.load_appium_txt file: File.join(__dir__, 'caps', 'android_appium.txt')
+Appium::Driver.new(caps, true)
+Appium.promote_appium_methods Object
 
-Allure.configure do |config|
-  config.results_directory = 'output/allure-results'
-  config.clean_results_directory = true
-end
+FileUtils.rm_f(Dir.glob('output/*'))
