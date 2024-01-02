@@ -1,7 +1,5 @@
 caps_bs:
-
-   server: 'hub-cloud.browserstack.com'
-
+  server: 'hub-cloud.browserstack.com'
   common_caps:
   browserstack.user: 'myUser'
   browserstack.key: 'myKey'
@@ -10,7 +8,7 @@ caps_bs:
   browserstack.debug: true
 
 browser_caps:
-    device: 'Google Pixel 3'
-    os_version: "9.0"
-    app: 'bs://<app-id>'
-    name: 'first_test'
+  device: 'Google Pixel 3'
+  os_version: "9.0"
+  app: 'bs://<app-id>'
+  name: 'first_test'
