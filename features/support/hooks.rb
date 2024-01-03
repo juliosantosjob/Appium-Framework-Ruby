@@ -11,7 +11,7 @@ After do
   shot = screenshot('output/temp_evidence.png')
 
   Allure.add_attachment(
-    name: 'Screenshot',
+    name: 'screenshot',
     type: Allure::ContentType::PNG,
     source: File.open(shot)
   )
