@@ -1,8 +1,9 @@
-source 'http://rubygems.org'
+source 'https://rubygems.org'
 
+gem 'allure-cucumber'
+gem 'appium_lib'
+gem 'appium_lib_core'
 gem 'cucumber'
 gem 'rspec'
-gem 'appium_lib'
 gem 'rubocop'
 gem 'yaml'
-gem 'allure-cucumber'
