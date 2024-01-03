@@ -1,7 +1,9 @@
+require_relative './helpers'
+
 $tools = ENV['t']
 
 def get_caps
-  $tools='appium' if $tools.nil?
+  $tools='ap' if $tools.nil?
 
   case $tools
   when 'ap'

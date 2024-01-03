@@ -1,6 +1,8 @@
 Before do
   driver.start_driver
   driver.set_wait(DEFAULT_HOLD)
+
+  FileUtils.rm_f(Dir.glob('output/*'))
 end
 
 After do
