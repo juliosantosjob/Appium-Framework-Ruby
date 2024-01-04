@@ -13,14 +13,14 @@ end
 
 After do
   begin
-    shot = screenshot('output/temp_evidence.png')
+    @shot = screenshot('output/evidence.png')
   rescue => exception
-    puts 'Error: Unable to perform screenshot action!'
+    puts "Error: Unable to perform screenshot action! #{exception.message}"
   end
 
   Allure.add_attachment(
     name: 'screenshot',
     type: Allure::ContentType::PNG,
-    source: File.open(shot)
+    source: File.open(@shot)
   )
 end
