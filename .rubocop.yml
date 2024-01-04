@@ -1,0 +1,8 @@
+AllCops:
+  TargetRubyVersion:  3.2
+
+StyleGuideCopsOnly: 
+  Enabled: false
+
+Style/frozen_string_literal: 
+  Enabled: false

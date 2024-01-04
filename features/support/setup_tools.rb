@@ -1,25 +1,25 @@
 require_relative './helpers'
 
-$tools = ENV['t']
+@tools = ENV['t']
 
-def get_caps
-  $tools='ap' if $tools.nil?
+def desired_caps
+  @tools = 'ap' if @tools.nil?
 
-  case $tools
+  case @tools
   when 'ap'
     appium_caps = load_file('caps', 'android_appium.yml')
-    caps = {
+    {
       caps: appium_caps['caps'],
       appium_lib: appium_caps['appium_lib']
     }
+
   when 'bs'
-    browserstack_caps = load_file('caps', 'android_broserstack.yml')
-    caps = {
-      caps: browserstack_caps['caps_bs'],
-      appium_lib: browserstack_caps['browser_caps']
+    browserstack_caps = read_file('caps', 'android_broserstack.yml')
+    {
+      caps: browserstack_caps['caps'],
+      appium_lib: browserstack_caps['appium_lib']
     }
   else
     raise 'Invalid argument for platform, please enter a valid argument!'
   end
-  return caps
 end

@@ -1,14 +1,10 @@
-caps_bs:
-  server: 'hub-cloud.browserstack.com'
-  common_caps:
-  browserstack.user: 'myUser'
-  browserstack.key: 'myKey'
-  project: 'First Cucumber Android Project'
-  build: 'Cucumber Android'
-  browserstack.debug: true
-
-browser_caps:
+caps:
+  platformName: 'Android'
+  deviceName: 'emulator'
+  build: 'E2e testing with ruby'
   device: 'Google Pixel 3'
-  os_version: "9.0"
-  app: 'bs://<app-id>'
-  name: 'first_test'
+  browserstack.debug: true
+  app: 'bs://<%= ENV['BS_HASH'] %>'
+
+appium_lib:
+  server_url: 'https://<%= ENV['BS_USER'] %>:<%= ENV['BS_KEY'] %>@hub-cloud.browserstack.com/wd/hub'
