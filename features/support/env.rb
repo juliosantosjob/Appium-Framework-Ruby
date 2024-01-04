@@ -1,17 +1,17 @@
-require 'cucumber'
-require 'rspec'
-require 'rubocop'
-require 'appium_lib'
-require 'yaml'
-require 'allure-cucumber'
-require 'appium_lib_core'
-require 'browserstack/local'
-require 'selenium-webdriver'
-require 'dotenv-vault/load'
-require 'sinatra'
-require 'erb'
+require "cucumber"
+require "rspec"
+require "rubocop"
+require "appium_lib"
+require "allure-cucumber"
+require "browserstack/local"
+require "selenium-webdriver"
+require "dotenv-vault/load"
+require "sinatra"
+require "erb"
+require "yaml"
+require "ruby-lsp"
 
-require_relative './setup_tools'
+require_relative "./setup_tools"
 
 DEFAULT_HOLD = 20
 

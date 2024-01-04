@@ -1,8 +1,17 @@
-AllCops:
-  TargetRubyVersion:  3.2
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
 
-StyleGuideCopsOnly: 
+Layout/LineLength:
+  Max: 100  
+
+Style/StringLiteralsInInterpolation:
   Enabled: false
 
-Style/frozen_string_literal: 
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Metrics/MethodLength:
   Enabled: false
