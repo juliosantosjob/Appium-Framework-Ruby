@@ -1,5 +1,5 @@
 Given("the access user home") do
-  @app_screens = App_Screens.new
+  @app_screens = AppScreens.new
   @app_screens.open_app
 end
 
