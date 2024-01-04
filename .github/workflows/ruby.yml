@@ -7,18 +7,24 @@ on:
       - main
 
 jobs:
-  tests-e2e:
-    runs-on: ubuntu-latest
-
+  run:
+    name: Ruby 
+    runs-on: ${{ matrix.operating-system }}
+    strategy:
+      matrix:
+        operating-system: [ubuntu-latest, windows-latest, macos-latest]
+        version: [2.5.x, 2.6, 2.7.x]
     steps:
-    - name: run checkout project
-      uses: actions/checkout@v3
-    
-    - name: Set up Ruby
-      uses: ruby/setup-ruby@55283cc23133118229fd3f97f9336ee23a179fcf
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: use-ruby ${{ matrix.version }}
+      uses: ./
       with:
-        ruby-version: 3.0
-        bundler-cache: true
+        ruby-version: ${{ matrix.version}}
+
+    - name: ruby version
+      run: ruby -v
    
     - name: Run tests
       env:
