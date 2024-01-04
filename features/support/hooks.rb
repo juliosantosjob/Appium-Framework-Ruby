@@ -1,16 +1,22 @@
 Before do
   driver.start_driver
-  driver.set_wait(DEFAULT_HOLD)
-
-  FileUtils.rm_f(Dir.glob('output/*'))
 end
 
 After do
   driver.driver_quit
 end
 
+Before do
+  driver.set_wait(DEFAULT_HOLD)
+  FileUtils.rm_f(Dir.glob('output/*'))
+end
+
 After do
-  shot = screenshot('output/temp_evidence.png')
+  begin
+    shot = screenshot('output/temp_evidence.png')
+  rescue ZeroDivisionError
+    puts 'Error: Unable to perform screenshot action!'
+  end
 
   Allure.add_attachment(
     name: 'screenshot',

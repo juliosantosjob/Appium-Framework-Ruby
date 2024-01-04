@@ -146,12 +146,12 @@ DEPENDENCIES
   browserstack-local
   cucumber
   dotenv
-  dotenv-vault (~> 0.10.1)
-  puma (~> 6.4)
+  dotenv-vault
+  puma
   rspec
   rubocop
   selenium-webdriver
-  sinatra (~> 3.2)
+  sinatra
   yaml
 
 BUNDLED WITH
