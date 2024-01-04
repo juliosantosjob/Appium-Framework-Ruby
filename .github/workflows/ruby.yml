@@ -5,9 +5,12 @@ on:
   pull_request:
     branches:
       - main
+  
+  schedule:
+    - cron: '0 12,15,18 * * 1-5'  
 
 jobs:
-  tests:
+  tests-e2e:
     runs-on: ubuntu-latest
     steps:
     - name: run checkout project
