@@ -8,19 +8,26 @@ end
 
 Before do
   driver.set_wait(DEFAULT_HOLD)
-  FileUtils.rm_f(Dir.glob('output/*'))
+  FileUtils.rm_f(Dir.glob('output/*')) if Dir.exist?('output')
 end
 
 After do
   begin
-    @shot = screenshot('output/evidence.png')
+  binary_shot = driver.screenshot_as(:base64)
+  temp_shot = 'output/temp_shot.png'
+
+  File.open(temp_shot, "wb") do |f|
+    f.write(Base64.decode64(binary_shot).force_encoding("UTF-8"))
+  end
+
   rescue => exception
     puts "Error: Unable to perform screenshot action! #{exception.message}"
   end
 
   Allure.add_attachment(
-    name: 'screenshot',
+    name: 'evidence.png',
     type: Allure::ContentType::PNG,
-    source: File.open(@shot)
+    source: File.open(temp_shot),
+    test_case: true
   )
 end
