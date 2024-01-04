@@ -1,3 +1,0 @@
-default: -p bdd -p allure
-bdd: --publish-quiet --format pretty
-allure: --format AllureCucumber::CucumberFormatter --out=output
