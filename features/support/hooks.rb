@@ -8,7 +8,11 @@ end
 
 Before do
   driver.set_wait(DEFAULT_HOLD)
-  FileUtils.rm_f(Dir.glob('output/*')) if Dir.exist?('output')
+  if Dir.exist?('output')
+    FileUtils.rm_f(Dir.glob('output/*'))
+  else
+    Dir.mkdir 'output'
+  end
 end
 
 After do
