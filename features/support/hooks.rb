@@ -14,7 +14,7 @@ end
 After do
   begin
     shot = screenshot('output/temp_evidence.png')
-  rescue ZeroDivisionError
+  rescue => exception
     puts 'Error: Unable to perform screenshot action!'
   end
 
