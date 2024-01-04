@@ -23,7 +23,8 @@ After do |scenario|
     temp_shot_path = "output/#{scenario.name}_evd_#{scenario.failed? ? 'success' : 'error' }.png"
 
     File.open(temp_shot_path , "wb") do |f|
-    f.write(Base64.decode64(binary_shot).force_encoding("UTF-8"))
+      f.write(Base64.decode64(binary_shot).force_encoding("UTF-8"))
+    end
 
   rescue => e
     puts "Error: Unable to perform screenshot action! #{e.message}"
@@ -35,5 +36,4 @@ After do |scenario|
       source: File.open(temp_shot_path ),
       test_case: true
     )
-  end
 end
