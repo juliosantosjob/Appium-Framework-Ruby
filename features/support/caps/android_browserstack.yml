@@ -2,7 +2,7 @@ caps:
   platformName: 'Android'
   deviceName: 'emulator'
   build: 'E2e testing with ruby'
-  device: '<%= ENV['DEVICE_NAME'] %>'
+  device: 'Google Pixel 3'
   browserstack.debug: true
   app: 'bs://<%= ENV['BS_HASH'] %>'
  
