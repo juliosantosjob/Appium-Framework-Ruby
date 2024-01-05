@@ -1,0 +1,2 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Fri Jan 05 18:10:59 GMT 2024","Fri Jan 05 18:11:38 GMT 2024","39201","","Home","","app","","Amount displayed","Location - features/specs/app.feature:5"
