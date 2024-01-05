@@ -7,7 +7,7 @@ After do
 end
 
 Before do
-  driver.set_wait(DEFAULT_HOLD)
+  driver.manage.timeouts.implicit_wait = DEFAULT_HOLD
   output_directory = "output"
 
   if Dir.exist?(output_directory)
@@ -20,7 +20,7 @@ end
 After do |scenario|
   begin
     binary_shot = driver.screenshot_as(:base64)
-    temp_shot_path = "output/#{scenario.name}_evd_#{scenario.failed? ? "success" : "error"}.png"
+    temp_shot_path = "output/#{scenario.name}_evd_#{scenario.failed? ? "error" : "success"}.png"
 
     File.open(temp_shot_path, "wb") do |f|
       f.write(Base64.decode64(binary_shot).force_encoding("UTF-8"))

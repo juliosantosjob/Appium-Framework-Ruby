@@ -1,4 +1,4 @@
-require_relative "./helpers"
+require_relative "./file_uploader"
 
 @tools = ENV["t"]
 

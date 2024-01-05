@@ -4,11 +4,8 @@ def load_file(folder, file)
 end
 
 def read_file(folder, file)
-  # Loading YAML file content as a string
-  yaml_content = File.read(File.join(__dir__, folder, file))
-
-  # Creating an ERB object with the model
-  erb_template = ERB.new(yaml_content)
+  # Loading YAML file content as a string and creating an ERB object with the model
+  erb_template = ERB.new(File.read(File.join(__dir__, folder, file)))
 
   # Rendering the model with variables
   evaluated_yaml = erb_template.result(binding)
