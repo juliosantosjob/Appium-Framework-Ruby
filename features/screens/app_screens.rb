@@ -4,7 +4,7 @@ class AppScreens
     @btn_show_blc = "show-balance"
     @fld_usr_balance = "user-balance"
     @f_element = "//*[contains(@text,'Transferir')]"
-    @s_element = "//*[contains(@text,'Indicar amigos')]"
+    @s_element = "//*[contains(@text,'Cobrar')]"
     @class_element = "android.widget.EditText"
     @fld_search = "Buscar Contato"
   end
