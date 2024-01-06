@@ -1,0 +1,3 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"broken","Sat Jan 06 05:49:35 GMT 2024","Sat Jan 06 05:49:36 GMT 2024","1379","","Home aplication","","app","","Amount displayed","Location - features/specs/app.feature:10"
+"broken","Sat Jan 06 05:49:36 GMT 2024","Sat Jan 06 05:49:37 GMT 2024","996","","Home aplication","","app","","Search contact","Location - features/specs/app.feature:15"
