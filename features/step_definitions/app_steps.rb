@@ -15,7 +15,7 @@ When("select option transfer") do
   app_screens.select_transfer
 end
 
-When("search a contact") do
+And("search a contact") do
   app_screens.fill_contact
 end
 
