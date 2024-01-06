@@ -1,6 +1,6 @@
 require_relative "./load_files"
 
-@tools = ENV["t"]
+@tools = ENV["tools"]
 
 def desired_caps
   @tools ||= "ap"
