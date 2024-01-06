@@ -27,3 +27,9 @@ Lint/DuplicateHashKey:
   
 Metrics/AbcSize:
   Enabled: false
+
+Style/RedundantBegin:
+  Enabled: false
+
+Style/RescueStandardError:
+  Enabled: false  

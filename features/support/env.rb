@@ -12,7 +12,7 @@ require "yaml"
 require "ruby-lsp"
 
 require_relative "./setup_tools"
-require_relative "./commands"
+require_relative "./custom_commands"
 
 DEFAULT_HOLD = 20
 
