@@ -1,0 +1,1 @@
+[{"uid":"a0f220f2f0527ded","name":"Amount displayed","time":{"start":1704589119629,"stop":1704589148477,"duration":28848},"status":"passed","severity":"normal"},{"uid":"5b4b8848bd15231e","name":"Search contact","time":{"start":1704589148479,"stop":1704589197928,"duration":49449},"status":"broken","severity":"normal"}]
