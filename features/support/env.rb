@@ -10,11 +10,13 @@ require "sinatra"
 require "erb"
 require "yaml"
 require "ruby-lsp"
+require "rake"
 
 require_relative "./setup_tools"
-require_relative "./custom_commands"
-
-DEFAULT_HOLD = 20
+require_relative "./helpers/custom_commands"
 
 Appium::Driver.new(desired_caps, true)
 Appium.promote_appium_methods Object
+
+Rake.application.run(["clean_output"])
+DEFAULT_HOLD = 20

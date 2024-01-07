@@ -1,20 +1,10 @@
 Before do
   driver.start_driver
+  driver.manage.timeouts.implicit_wait = DEFAULT_HOLD
 end
 
 After do
   driver.driver_quit
-end
-
-Before do
-  driver.manage.timeouts.implicit_wait = DEFAULT_HOLD
-  output_directory = "output"
-
-  if Dir.exist?(output_directory)
-    FileUtils.rm_f(Dir.glob("#{output_directory}/*"))
-  else
-    Dir.mkdir(output_directory)
-  end
 end
 
 After do |scenario|
@@ -35,4 +25,5 @@ After do |scenario|
     source: File.open(temp_shot_path),
     test_case: true
   )
+  Rake.application.run(["allure_history"])
 end

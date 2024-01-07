@@ -7,6 +7,7 @@ class AppScreens
     @s_element = "//*[contains(@text,'Cobrar')]"
     @class_element = "android.widget.EditText"
     @fld_search = "Buscar Contato"
+    @contact_name = random_contacts("features/constants", "data.yml", "contacts")
   end
 
   def open_app
@@ -31,10 +32,10 @@ class AppScreens
 
   def fill_contact
     find_element(class: @class_element, text: @fld_search).click
-    find_element(class: @class_element, text: @fld_search).send_keys("Hank Pym")
+    find_element(class: @class_element, text: @fld_search).send_keys(@contact_name)
   end
 
   def contact_view
-    find_element(class: @class_element, text: "Hank Pym").displayed?
+    find_element(class: @class_element, text: @contact_name).displayed?
   end
 end

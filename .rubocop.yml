@@ -32,4 +32,7 @@ Style/RedundantBegin:
   Enabled: false
 
 Style/RescueStandardError:
-  Enabled: false  
+  Enabled: false
+
+Style/WordArray:
+  Enabled: false
