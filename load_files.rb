@@ -13,3 +13,10 @@ def read_file(folder, file)
   # Converting the resulting string back to a YAML object
   YAML.safe_load(evaluated_yaml)
 end
+
+def load_file_random(path, file, key)
+  load_data = YAML.load_file(File.join(path, file))[key].values
+
+  random = rand(load_data.length)
+  load_data[random]
+end

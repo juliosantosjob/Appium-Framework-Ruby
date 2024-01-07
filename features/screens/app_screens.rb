@@ -7,7 +7,7 @@ class AppScreens
     @s_element = "//*[contains(@text,'Cobrar')]"
     @class_element = "android.widget.EditText"
     @fld_search = "Buscar Contato"
-    @contact_name = random_contacts("features/constants", "data.yml", "contacts")
+    @contact_name = load_file_random("features/constants", "data.yml", "contacts")
   end
 
   def open_app
