@@ -25,5 +25,4 @@ After do |scenario|
     source: File.open(temp_shot_path),
     test_case: true
   )
-  Rake.application.run(["allure_history"])
 end
