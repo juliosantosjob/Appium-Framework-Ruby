@@ -13,7 +13,7 @@ def desired_caps
 
   when "bs"
     browserstack_caps = YAML.safe_load(
-      ERB.new(File.read("features/support/caps/ndroid_browserstack.yml")).result(binding)
+      ERB.new(File.read("features/support/caps/android_browserstack.yml")).result(binding)
     )
     { caps: browserstack_caps["caps"], appium_lib: browserstack_caps["appium_lib"] }
 
