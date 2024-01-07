@@ -1,4 +1,5 @@
 require_relative "../../load_files"
+require "dotenv-vault/load"
 
 @tools = ENV["tools"]
 

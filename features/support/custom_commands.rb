@@ -30,7 +30,7 @@ def wait_and_tap(attributes, timeout = 5)
     manage.timeouts.implicit_wait = timeout
     find_element(attributes).click
   rescue => e
-    raise "Erro: #{e.message}"
+    raise "Error: Unable to wait and click on element #{e.message}"
   end
 end
 
@@ -59,6 +59,6 @@ def swiping(firts_element, second_element, timeout: 2500)
       duration: timeout
     )
   rescue => e
-    raise "Unable to swipe #{e.message}"
+    raise "Error: Unable to swipe #{e.message}"
   end
 end

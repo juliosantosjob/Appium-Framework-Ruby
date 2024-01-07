@@ -1,3 +1,5 @@
+require "yaml"
+
 def load_file(folder, file)
   # load a yml file
   YAML.load_file(File.join(__dir__, folder, file))
