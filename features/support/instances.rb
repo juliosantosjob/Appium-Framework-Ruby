@@ -1,3 +1,3 @@
-def app_screens
-  @app_screens ||= AppScreens.new
+def home_screens
+  @home_screens ||= HomeScreens.new
 end

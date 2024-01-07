@@ -36,3 +36,6 @@ Style/RescueStandardError:
 
 Style/WordArray:
   Enabled: false
+
+Style/ClassVars:
+  Enabled: false

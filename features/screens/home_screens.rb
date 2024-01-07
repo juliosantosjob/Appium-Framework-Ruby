@@ -1,4 +1,6 @@
-class AppScreens
+class HomeScreens
+  @@load = YAML.load_file("features/constants/data.yml")["contacts"].values
+
   def initialize
     @fld_nuconta = "//*[contains(@text,'NuConta')]"
     @btn_show_blc = "show-balance"
@@ -7,7 +9,7 @@ class AppScreens
     @s_element = "//*[contains(@text,'Cobrar')]"
     @class_element = "android.widget.EditText"
     @fld_search = "Buscar Contato"
-    @contact_name = load_file_random("features/constants", "data.yml", "contacts")
+    @contact_name = @@load[rand(@@load.length)]
   end
 
   def open_app
