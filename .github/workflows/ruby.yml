@@ -10,10 +10,10 @@ jobs:
   tests-e2e:
     runs-on: ubuntu-latest
     steps:
-    - name: run checkout project
-      uses: actions/checkout@v3
-    
+    - name: Run checkout project
     - uses: actions/checkout@v4
+
+    - name: Setup ruby
     - uses: ruby/setup-ruby@v1
       with:
         ruby-version: '3.3'
@@ -21,10 +21,10 @@ jobs:
     - name: Install dependencies
       run: bundle install
 
-    - name: Rubocop verify
+    - name: Verify rubocop
       run: rubocop
    
-    - name: Run tests
+    - name: Run tests E2E
       env:
         BS_USER: ${{ secrets.BS_USER }}
         BS_KEY: ${{ secrets.BS_KEY }}
