@@ -10,10 +10,9 @@ jobs:
   tests-e2e:
     runs-on: ubuntu-latest
     steps:
-    - name: Run checkout project
+    - name: run checkout project
     - uses: actions/checkout@v4
 
-    - name: Setup ruby
     - uses: ruby/setup-ruby@v1
       with:
         ruby-version: '3.3'
@@ -21,7 +20,7 @@ jobs:
     - name: Install dependencies
       run: bundle install
 
-    - name: Verify rubocop
+    - name: verify Rubocop 
       run: rubocop
    
     - name: Run tests E2E
