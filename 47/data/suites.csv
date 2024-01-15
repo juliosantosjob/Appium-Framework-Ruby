@@ -1,3 +1,0 @@
-"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
-"passed","Sun Jan 07 20:16:48 GMT 2024","Sun Jan 07 20:17:11 GMT 2024","23333","","Home aplication","","home","","Amount displayed","Location - features/specs/home.feature:10"
-"passed","Sun Jan 07 20:17:11 GMT 2024","Sun Jan 07 20:17:42 GMT 2024","30854","","Home aplication","","home","","Search contact","Location - features/specs/home.feature:15"
