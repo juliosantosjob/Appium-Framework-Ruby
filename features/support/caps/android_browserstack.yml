@@ -1,10 +1,13 @@
 caps:
-  platformName: 'Android'
-  deviceName: 'emulator'
-  build: 'E2e testing with ruby'
-  device: 'Google Pixel 3'
+  platformName: "Android"
+  deviceName: "emulator"
+  build: "E2e testing with ruby"
+  device: "Google Pixel 3"
   browserstack.debug: true
-  app: 'bs://<%= ENV['BS_HASH'] %>'
- 
+  app: "bs://<%= ENV['BS_HASH'] %>"
+
 appium_lib:
-  server_url: 'https://<%= ENV['BS_USER'] %>:<%= ENV['BS_KEY'] %>@hub-cloud.browserstack.com/wd/hub'
+  server_url: <%= "https://#{ENV['BS_USER']}:#{ENV['BS_KEY']}@hub-cloud.browserstack.com/wd/hub" %>
+
+
+

@@ -33,3 +33,13 @@ task :build_app do
     end
   end
 end
+
+namespace :tools do
+  task :run_appium do
+    sh "cucumber tools=ap"
+  end
+
+  task :run_bs do
+    sh "cucumber tools=bs"
+  end
+end

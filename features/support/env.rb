@@ -12,7 +12,6 @@ require_relative "./setup_tools"
 require_relative "./custom_commands"
 
 Rake.application.run(["clean_output"])
-Rake.application.run(["build_app"])
 
 Appium::Driver.new(desired_caps, true)
 Appium.promote_appium_methods Object
