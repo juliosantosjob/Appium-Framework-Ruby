@@ -4,7 +4,6 @@ require "yaml"
 @tools = ENV["tools"]
 
 def desired_caps
-
   case @tools ||= "ap"
   when "ap"
     appium_caps = YAML.load_file("features/support/caps/android_appium.yml")
