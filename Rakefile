@@ -6,7 +6,7 @@ task :clean_output do
   output_directory = "output"
 
   if Dir.exist?(output_directory)
-    FileUtils.rm_f(Dir.glob("{output_directory}/*"))
+    FileUtils.rm_f(Dir.glob("#{output_directory}/*"))
   else
     Dir.mkdir(output_directory)
   end
